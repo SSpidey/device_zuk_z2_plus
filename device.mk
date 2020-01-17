@@ -22,8 +22,12 @@
 #
 
 DEVICE_PATH := device/zuk/z2_plus
+
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/ginkgo/ginkgo-vendor.mk)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
 # Inherit from vendor
 $(call inherit-product-if-exists, vendor/zuk/z2_plus/z2_plus-vendor.mk)
@@ -33,11 +37,7 @@ $(call inherit-product, device/zuk/msm8996-common/msm8996.mk)
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
-GalleryGo
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+    GalleryGo
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -75,3 +75,10 @@ PRODUCT_PACKAGES += \
 #FireFoxLite
 PRODUCT_PACKAGES += \
     FireFoxLite
+
+# Required packages
+PRODUCT_PACKAGES += \
+    CalendarStorage \
+    GoogleCalculator \
+    GoogleCalendar \
+    GoogleDeskClock 
