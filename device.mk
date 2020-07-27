@@ -21,6 +21,10 @@
 # definition file).
 #
 
+DEVICE_PATH := device/xiaomi/ginkgo
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/xiaomi/ginkgo/ginkgo-vendor.mk)
+
 # Inherit from vendor
 $(call inherit-product-if-exists, vendor/zuk/z2_plus/z2_plus-vendor.mk)
 
@@ -34,9 +38,25 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# MiCalculator
+PRODUCT_PACKAGES += \
+    MiCalculator
+
+# MiXplorer
+PRODUCT_PACKAGES += \
+    MiXplorer
+
+# MiXArchive
+PRODUCT_PACKAGES += \
+    MiXArchive
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.zuk.rc
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
+
+# Retro
+PRODUCT_PACKAGES += \
+    RetroMusic
