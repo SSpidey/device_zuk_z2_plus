@@ -63,3 +63,7 @@ PRODUCT_PACKAGES += \
 # Retro
 PRODUCT_PACKAGES += \
     RetroMusic
+
+#FireFoxLite
+PRODUCT_PACKAGES += \
+    FireFoxLite
