@@ -82,3 +82,7 @@ PRODUCT_PACKAGES += \
     GoogleCalculator \
     GoogleCalendar \
     GoogleDeskClock 
+
+# Kimci Recorder
+PRODUCT_PACKAGES += \
+    KimciRecorder
