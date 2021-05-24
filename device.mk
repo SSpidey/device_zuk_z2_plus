@@ -31,6 +31,10 @@ $(call inherit-product-if-exists, vendor/zuk/z2_plus/z2_plus-vendor.mk)
 # Inherit from msm8996-common
 $(call inherit-product, device/zuk/msm8996-common/msm8996.mk)
 
+# Prebuilt Packages
+PRODUCT_PACKAGES += \
+GalleryGo
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
