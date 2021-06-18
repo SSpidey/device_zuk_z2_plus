@@ -86,3 +86,7 @@ PRODUCT_PACKAGES += \
 # Kimci Recorder
 PRODUCT_PACKAGES += \
     KimciRecorder
+
+# VancedManager by Vanced Team
+PRODUCT_PACKAGES += \
+    VancedManager
