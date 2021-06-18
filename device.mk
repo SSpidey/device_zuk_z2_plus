@@ -76,7 +76,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FireFoxLite
 
-# Required packages
+# Gapps packages
 PRODUCT_PACKAGES += \
     CalendarStorage \
     GoogleCalculator \
