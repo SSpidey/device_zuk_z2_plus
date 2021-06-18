@@ -21,7 +21,7 @@
 # definition file).
 #
 
-DEVICE_PATH := device/xiaomi/ginkgo
+DEVICE_PATH := device/z2_plus/zuk
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/ginkgo/ginkgo-vendor.mk)
 
@@ -45,6 +45,9 @@ PRODUCT_PACKAGES += \
 # MiXplorer
 PRODUCT_PACKAGES += \
     MiXplorer
+
+# MiXplorer Permission
+$(DEVICE_PATH)/prebuilt/etc/permissions/privapp-permissions-mixplorer.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mixplorer.xml
 
 # MiXArchive
 PRODUCT_PACKAGES += \
