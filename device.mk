@@ -21,7 +21,7 @@
 # definition file).
 #
 
-DEVICE_PATH := device/z2_plus/zuk
+DEVICE_PATH := device/zuk/z2_plus
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/ginkgo/ginkgo-vendor.mk)
 
