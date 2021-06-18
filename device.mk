@@ -20,9 +20,6 @@
 # included in a build is to use PRODUCT_PACKAGES in a product
 # definition file).
 #
-
-DEVICE_PATH := device/zuk/z2_plus
-
 # Get non-open-source specific aspects
 
 PRODUCT_COPY_FILES += \
@@ -53,9 +50,6 @@ PRODUCT_PACKAGES += \
 # MiXplorer
 PRODUCT_PACKAGES += \
     MiXplorer
-
-# MiXplorer Permission
-$(DEVICE_PATH)/prebuilt/etc/permissions/privapp-permissions-mixplorer.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mixplorer.xml
 
 # MiXArchive
 PRODUCT_PACKAGES += \
